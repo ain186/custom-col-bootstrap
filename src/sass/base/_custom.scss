@@ -1,0 +1,59 @@
+@import "../base/variables";
+$colunns: 36;
+@mixin all-col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@mixin width-col($i) {
+    $width-col: $i/$colunns*100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 $width-col;
+    flex: 0 0 $width-col;
+    max-width: $width-col;
+}
+
+@for $i from 1 through $colunns {
+    .col-#{$i} {
+        @include all-col();
+        @include width-col($i);
+    }
+}
+
+@media (min-width: $SM) {
+    @for $i from 1 through $colunns {
+        .col-sm-#{$i} {
+            @include all-col();
+            @include width-col($i);
+        }
+    }
+}
+
+@media (min-width: $MD) {
+    @for $i from 1 through $colunns {
+        .col-md-#{$i} {
+            @include all-col();
+            @include width-col($i);
+        }
+    }
+}
+
+@media (min-width: $LG) {
+    @for $i from 1 through $colunns {
+        .col-lg-#{$i} {
+            @include all-col();
+            @include width-col($i);
+        }
+    }
+}
+
+@media (min-width: $XL) {
+    @for $i from 1 through $colunns {
+        .col-xl-#{$i} {
+            @include width-col($i);
+        }
+    }
+}

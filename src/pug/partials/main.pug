@@ -1,0 +1,57 @@
+- const columns = 24
+//- col-1-n col-sm-1-n col-md-1-n col-lg-1-n col-xl-1-n
+.container
+    - var n = 0;
+    while n < columns  
+        .row.text-center.row- 
+            div(class=`col-${++n} col-`)= "col-" + n
+br
+.container
+    - var n = 0;
+    while n < columns  
+        .row.text-center.row-- 
+            div(class=`col-sm-${++n} col--`)= "col-sm-" + n
+br
+.container
+    - var n = 0;
+    while n < columns  
+        .row.text-center.row- 
+            div(class=`col-md-${++n} col-`)= "col-md-" + n
+br
+.container
+    - var n = 0;
+    while n < columns  
+        .row.text-center.row-- 
+            div(class=`col-lg-${++n} col--`)= "col-lg-" + n
+br
+.container
+    - var n = 0;
+    while n < columns  
+        .row.text-center.row- 
+            div(class=`col-xl-${++n} col-`)= "col-xl-" + n
+//- col-auto col-sm-auto col-md-auto col-lg-auto col-xl-auto
+br
+.container
+    .row.text-center.row-- 
+        div(class=`col-auto col--`) col-auto
+    .row.text-center.row- 
+        div(class=`col-sm-auto col-`) col-sm-auto
+    .row.text-center.row-- 
+        div(class=`col-md-auto col--`) col-md-auto
+    .row.text-center.row- 
+        div(class=`col-lg-auto col-`) col-lg-auto
+    .row.text-center.row-- 
+        div(class=`col-xl-auto col--`) col-xl-auto
+//- 
+br
+.container
+    .row.text-center.row-- 
+        div(class=`col col--`) col
+    .row.text-center.row- 
+        div(class=`col-sm col-`) col-sm
+    .row.text-center.row-- 
+        div(class=`col-md col--`) col-md
+    .row.text-center.row- 
+        div(class=`col-lg col-`) col-lg
+    .row.text-center.row-- 
+        div(class=`col-xl col--`) col-xl
